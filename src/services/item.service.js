@@ -10,25 +10,37 @@ const gItems = [
     {
         _id: 'a101',
         title: 'Xiaomi Mi 11 Pro',
-        imgUrl: 'a101.png',
+        imgUrl: 'xiaomi-mi-11-pro.jpg',
         price: 200,
     },
     {
         _id: 'a102',
-        title: 'iPhone 12',
-        imgUrl: 'a102.png',
+        title: 'Apple iPhone 14 Pro',
+        imgUrl: 'apple-iphone-14-pro.jpg',
         price: 250,
     },
     {
         _id: 'a103',
-        title: 'Samsung Galaxy A12',
-        imgUrl: 'a104.png',
+        title: 'Samsung Galaxy S22 Ultra',
+        imgUrl: 'samsung-galaxy-s22-ultra.jpg',
         price: 250,
     },
     {
         _id: 'a104',
         title: 'OnePlus 9 Pro',
         imgUrl: 'oneplus-9-pro.jpg',
+        price: 250,
+    },
+    {
+        _id: 'a105',
+        title: 'Huawei P50 Pro',
+        imgUrl: 'huawei-p50-pro.png',
+        price: 250,
+    },
+    {
+        _id: 'a106',
+        title: 'Google Pixel 6 Pro',
+        imgUrl: 'google-pixel-6-pro.jpg',
         price: 250,
     },
 ]
