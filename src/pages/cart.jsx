@@ -5,14 +5,12 @@ import { loadCart } from "../store/actions/cart.action"
 
 export const Cart = () => {
 
-    const dispatch = useDispatch()
     const cart = useSelector(state => state.cartModule.cart)
 
-    useEffect (()=>{
-        dispatch(loadCart())
-    },[])
-
+    useEffect(() => {
+    }, [cart])
+    
     return <section className="cart">
-        <CartList cart={cart}/>
+        <CartList cart={cart} />
     </section>
 }
