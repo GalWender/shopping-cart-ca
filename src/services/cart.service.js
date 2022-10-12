@@ -1,0 +1,22 @@
+import { storageService } from './async-storage.service'
+
+const STORAGE_KEY = 'cart'
+
+export const itemService = {
+  query,
+  add,
+  remove,
+}
+
+
+async function query() {
+  return storageService.query(STORAGE_KEY)
+}
+
+function remove(itemId) {
+  return storageService.remove(STORAGE_KEY, itemId)
+}
+
+function add(item) {
+  return storageService.post(STORAGE_KEY, item)
+}
