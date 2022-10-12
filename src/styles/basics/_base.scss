@@ -45,12 +45,14 @@ h6 {
 }
 
 button {
-  font-family: roboto, roboto-light, Helvetica, sans-serif;
   cursor: pointer;
+  display: flex;
+  align-items: center;
   background-color: transparent;
   border: none;
   padding: 0;
 }
+
 
 svg.icon,
 svg.icon * {
