@@ -2,8 +2,6 @@ import { storageService } from './async-storage.service.js'
 import { utilService } from './util.service.js'
 import { userService } from './user.service.js'
 
-const STORAGE_KEY = 'itemDB'
-
 export const itemService = {
     query,
     getById,
@@ -29,9 +27,10 @@ const gItems = [
 
 
 function query() {
-    return gItems
+    return Promise.resolve(gItems)
 }
 
 function getById(itemId) {
-    return gItems.find(item => item._id === itemId)
+    const item = gItems.find(item => item._id === itemId)
+    return Promise.resolve(item)
 }
