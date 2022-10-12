@@ -13,16 +13,19 @@ const gItems = [
     {
         _id: 'a101',
         title: 'Xiaomi Redmi Note 10',
+        imgUrl: '',
         price: 200,
     },
     {
         _id: 'a102',
         title: 'iPhone 12',
+        imgUrl: '',
         price: 250,
     },
     {
         _id: 'a103',
         title: 'Samsung Galaxy A12',
+        imgUrl: '',
         price: 250,
     },
 ]

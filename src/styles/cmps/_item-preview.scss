@@ -1,0 +1,17 @@
+.item-preview {
+    display: flex;
+    border: 1px solid rgb(26, 26, 26);
+    padding: 10px;
+    flex-direction: column;
+
+    .add-to-cart {
+        background-color: rgb(26, 26, 26);
+        color: white;
+        padding: 5px;
+        border-radius: 0.3em;
+    }
+
+    .price {
+        color: orangered;
+    }
+}
