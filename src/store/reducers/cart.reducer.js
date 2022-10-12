@@ -17,7 +17,7 @@ export function cartReducer(state = initialState, action) {
             return { ...state, cart }
 
         case 'REMOVE_ITEM':
-            cart = state.cart.filter(item => item.id !== action.itemId)
+            cart = state.cart.filter(item => item._id !== action.itemId)
             return { ...state, cart }
 
         default:
