@@ -30,7 +30,7 @@ export const Home = () => {
                 <h2>Our Products</h2>
                 <div className="cart-info">
                     <h4>My Cart</h4>
-                    <span>(cart.length)</span>
+                    <span>({cart.length} items)</span>
                 </div>
             </div>
             <ItemList items={items} />
