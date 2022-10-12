@@ -1,11 +1,17 @@
 .item-preview {
-    border: 1px solid rgb(26, 26, 26);
     padding: 10px;
+    background-color: white;
+    height: 100%;
+    border-radius: 0.5em;
 
     .card {
         display: flex;
         flex-direction: column;
         gap: 5px;
+        align-items: center;
+        justify-content: space-between;
+        height: 100%;
+       
 
         .add-to-cart {
             background-color: rgb(26, 26, 26);
@@ -17,6 +23,11 @@
         
         .price {
             color: orangered;
+        }
+
+        img {
+            width: 200px;
+            object-fit: cover;
         }
     }
 }
