@@ -7,7 +7,7 @@ import routes from './routes'
 import { AppHeader } from './cmps/app-header'
 import { AppFooter } from './cmps/app-footer'
 
-export class RootCmp extends React.Component {
+export class App extends React.Component {
 
     render() {
         return (
