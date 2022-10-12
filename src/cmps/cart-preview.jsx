@@ -4,7 +4,6 @@ import { removeItem } from '../store/actions/cart.action'
 export const CartPreview = ({ item }) => {
     const dispatch = useDispatch()
     const onRemoveItem = () => {
-        // console.log(item._id);
         dispatch(removeItem(item._id))
     }
 
