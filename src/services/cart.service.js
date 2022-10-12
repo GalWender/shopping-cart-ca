@@ -2,7 +2,7 @@ import { storageService } from './async-storage.service'
 
 const STORAGE_KEY = 'cart'
 
-export const itemService = {
+export const cartService = {
   query,
   add,
   remove,
