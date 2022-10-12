@@ -1,3 +1,5 @@
+import { cartService } from "../../services/cart.service"
+
 const initialState = {
     cart: [],
     loader: false,
