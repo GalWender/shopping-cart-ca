@@ -2,39 +2,43 @@ import { storageService } from './async-storage.service.js'
 import { utilService } from './util.service.js'
 import { userService } from './user.service.js'
 
-const STORAGE_KEY = 'toyDB'
+const STORAGE_KEY = 'itemDB'
 
-export const toyService = {
+export const itemService = {
     query,
     getById,
     save,
     remove,
 }
 
+const items = [
+    {
+        _id: utilService.makeId(),
+        title: ''
+    }
+]
+
 
 function query(filterBy) {
     return storageService.query(STORAGE_KEY)
-        .then((toys) => {
-            // toys = (filterBy.category === 'ACTIVE') ?
-            //     (filterBy.category === 'DONE') ?
-            // if (filterBy.term && filterBy.term !== '') todos = todos.filter(todo => todo.txt.toLowerCase().includes(filterBy.term.toLowerCase()))
-            return toys
+        .then((items) => {
+            return items
         })
 }
-function getById(toyId) {
-    return storageService.get(STORAGE_KEY, toyId)
+function getById(itemId) {
+    return storageService.get(STORAGE_KEY, itemId)
 }
-function remove(toyId) {
+function remove(itemId) {
     // return Promise.reject('Not now!');
-    return storageService.remove(STORAGE_KEY, toyId)
+    return storageService.remove(STORAGE_KEY, itemId)
 }
-function save(toy) {
-    if (toy._id) {
-        return storageService.put(STORAGE_KEY, toy)
+function save(item) {
+    if (item._id) {
+        return storageService.put(STORAGE_KEY, item)
     } else {
         // When switching to backend - remove the next line!
-        toy.created = Date.now()
-        return storageService.post(STORAGE_KEY, toy)
+        item.created = Date.now()
+        return storageService.post(STORAGE_KEY, item)
     }
 }
 
