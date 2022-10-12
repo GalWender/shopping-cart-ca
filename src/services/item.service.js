@@ -29,9 +29,10 @@ const gItems = [
 
 
 function query() {
-    return gItems
+    return Promise.resolve(gItems)
 }
 
 function getById(itemId) {
-    return gItems.find(item => item._id === itemId)
+    const item = gItems.find(item => item._id === itemId)
+    return Promise.resolve(item)
 }
