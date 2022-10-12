@@ -12,10 +12,12 @@ const rootReducer = combineReducers({
 })
 
 export const store = createStore(rootReducer, composeEnhancers(applyMiddleware(thunk)))
-window.gStore = store
+
+// debugging:
+// window.gStore = store
 
 
-//to print store after every use
-store.subscribe(() => {
-    console.log('Store state is:', store.getState())
-})
+// to print store after every use
+// store.subscribe(() => {
+//     console.log('Store state is:', store.getState())
+// })

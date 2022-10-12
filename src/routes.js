@@ -1,11 +1,15 @@
 import { Home } from './pages/home.jsx'
+import { Test } from './pages/test.jsx'
 
-// Routes accesible from the main navigation (in AppHeader)
 const routes = [
     {
         path: '/',
         component: <Home />,
         label: 'Home',
+    },
+    {
+        path: '/test',
+        component: <Test />,
     },
 ]
 
