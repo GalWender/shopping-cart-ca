@@ -28,10 +28,10 @@ export const Home = () => {
         <div className="items-container main-layout">
             <div className="info">
                 <h2>Our Products</h2>
-                <div className="cart-info">
+                {/* <div className="cart-info">
                     <h4>My Cart</h4>
                     <span>({cart.length} items)</span>
-                </div>
+                </div> */}
             </div>
             <ItemList items={items} />
         </div>

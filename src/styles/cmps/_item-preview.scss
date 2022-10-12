@@ -14,7 +14,7 @@
        
 
         .add-to-cart {
-            background-color: rgb(26, 26, 26);
+            background-color: var(--clr-black);
             color: white;
             padding: 5px;
             width: fit-content;
@@ -22,7 +22,7 @@
         }
         
         .price {
-            color: orangered;
+            color: var(--clr-main);
         }
 
         img {
