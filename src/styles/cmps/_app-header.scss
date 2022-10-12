@@ -1,0 +1,30 @@
+.app-header {
+    background-color: rgb(79, 70, 70);
+    height: 70px;
+    display: flex;
+    align-items: center;
+    fill: white;
+
+    .header-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        color: white;
+    }
+    .btn-svg-house {
+        width: 30px;
+        height: 30px;
+    }
+    .btn-svg-cart {
+        width: 20px;
+        height: 20px;
+    }
+    .btn-checkout{
+        display: flex;
+        gap: 5px;
+    }
+    p {
+        color: white;
+        font-weight: 700;
+    }
+}
