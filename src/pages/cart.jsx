@@ -9,8 +9,11 @@ export const Cart = () => {
 
     useEffect(() => {
     }, [cart])
-    
+
     return <section className="cart">
-        <CartList cart={cart} />
+        {(cart.length <= 0) ?
+            <h1>Cart is empty</h1>
+            : <CartList cart={cart} />
+        }
     </section>
 }
