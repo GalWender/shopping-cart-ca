@@ -22,7 +22,7 @@ const gItems = [
     {
         _id: 'a103',
         title: 'Samsung Galaxy A12',
-        imgUrl: 'a103.png',
+        imgUrl: 'a104.png',
         price: 250,
     },
     {
