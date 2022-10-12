@@ -5,16 +5,6 @@
 // import { taskService } from "../../services/task.service"
 
 
-export function getActionUpdatename(name) {
-    return { type: 'UPDATE_name', name }
-}
-
-export function setLoader() {
-    return (dispatch, getState) => {
-        dispatch({ type: 'SET_LOADING', isLoading: true })
-    }
-}
-
 export function loadnames() {
     return async (dispatch, getState) => {
         try {
@@ -43,18 +33,6 @@ export function removename(nameId) {
     }
 }
 
-export function setFilter(filterBy) {
-    return (dispatch) => {
-        dispatch({ type: 'SET_FILTER', filterBy })
-    }
-}
-
-export function setSort(sortBy) {
-    return (dispatch) => {
-        dispatch({ type: 'SET_SORT', sortBy })
-    }
-}
-
 export function loadname(nameId, sortBy, filterBy) {
     return async (dispatch, getState) => {
         try {
@@ -67,32 +45,3 @@ export function loadname(nameId, sortBy, filterBy) {
         }
     }
 }
-
-export function addname(name) {
-    return async (dispatch, getState) => {
-        try {
-            dispatch({ type: 'SET_LOADING', isLoading: true })
-            const savedname = await nameService.save(name)
-            dispatch({ type: 'ADD_name', name: savedname })
-        } catch (err) {
-            // showErrorMsg('Failed to add name try again')
-        } finally {
-            dispatch({ type: 'SET_LOADING', isLoading: false })
-        }
-    }
-}
-
-export function updatename(name) {
-    return async (dispatch, getState) => {
-        try {
-            await nameService.save(name)
-            // const updatedname = await nameService.save(name)
-            // dispatch({ type: 'UPDATE_name', name: updatedname })
-        } catch (err) {
-            // showErrorMsg('Failed to update name')
-        } finally {
-            dispatch({ type: 'SET_LOADING', isLoading: false })
-        }
-    }
-}
-
