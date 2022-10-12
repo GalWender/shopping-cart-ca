@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import { Routes, Route } from 'react-router'
+
+import routes from './routes'
+
+import { AppHeader } from './cmps/app-header'
+import { AppFooter } from './cmps/app-footer'
+
+export class RootCmp extends React.Component {
+
+    render() {
+        return (
+            <div>
+                <AppHeader />
+                <main>
+                    <Routes>
+                        {routes.map(route => <Route key={route.path} exact={true} element={route.component} path={route.path} />)}
+                    </Routes>
+                </main>
+                <AppFooter />
+            </div>
+        )
+    }
 }
 
-export default App;
+
