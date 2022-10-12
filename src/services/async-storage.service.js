@@ -9,7 +9,7 @@ export const storageService = {
 }
 
 const gnames = [
-        //    add some starter data
+    //    add some starter data
 ]
 
 function getname() {
@@ -40,7 +40,7 @@ function postMany(entityType, entities) {
 }
 
 function post(entityType, newEntity) {
-    newEntity._id = _makeId()
+    if (!newEntity._id) newEntity._id = _makeId()
     return query(entityType)
         .then(entities => {
             entities.push(newEntity)
