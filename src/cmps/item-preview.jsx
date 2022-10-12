@@ -7,6 +7,7 @@ export const ItemPreview = (item) => {
             <img>item.imgUrl</img>
             <p className="desc">item.desc</p>
             <span className="price">item.price</span>
+            <button>Add to cart</button>
         </div>
     </section>
 
